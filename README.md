@@ -77,7 +77,7 @@ To do that, Mavlink parser plugin needs to be generated for Wireshark
 Clone the `mavlink` repository at https://github.com/mavlink/mavlink
 
 ```
-git clone https://github.com/mavlink/mavlink.git
+git clone --recursive https://github.com/mavlink/mavlink.git
 ```
 
 Enter the directory
