@@ -89,16 +89,16 @@ cd mavlink
 Run the generation script
 
 ```
-python3 -m pymavlink.tools.mavgen --lang=WLua --wire-protocol=2.0 --output=mavlink.xml message_definitions/v1.0/all.xml 
+python3 -m pymavlink.tools.mavgen --lang=WLua --wire-protocol=2.0 --output=mavlink.lua message_definitions/v1.0/common.xml 
 ```
 
 Copy the plugin to Wireshark plugin directory
 
 ```
-cp mavlink.xml /usr/lib64/wireshark/plugins
+cp mavlink.lua $WIRESHARK_PLUGIN_PATH
 ```
 
-Normally, it is `/usr/lib64/wireshark/plugins`
+On Fedora, the path is `/usr/lib64/wireshark/plugins`
 
 The directory can be found by opening Wireshark, under `Help > About Wireshark > Folders > Global Lua Plugins`
 
