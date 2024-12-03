@@ -6,7 +6,7 @@ RUN git config --global url."https://github.com/".insteadOf git://github.com/
 
 # Clone ardupilot repository
 ARG GIT_TAG=master
-RUN git clone -b master --depth=1 https://github.com/ArduPilot/ardupilot.git ardupilot
+RUN git clone -b ${GIT_TAG} --depth=1 https://github.com/ArduPilot/ardupilot.git ardupilot
 WORKDIR ardupilot
 
 # Initialize git submodules (following http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html)
